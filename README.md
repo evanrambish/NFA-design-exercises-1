@@ -17,3 +17,5 @@ Problem 8 had given me the hardest time since the NFA has to recognize both begi
 I asked questions to ChatGPT about the difference between NFAs and DFAs and how nondeterministic branching works.
 
 The main thing that I learned doing this is that every single possible transition has to be considered. For the future, when I do state-controller or compiler problems, I will make sure to write out every possible current state after each input symbol and test some short, typical, or misleading strings.
+
+The gold string that surprised me most was Problem 8's `010`. While reading the final `0` from `q2`, the possible next-state set is `{q3, q4}`. The state that was easiest to overlook was `q4`, because the NFA has two separate transitions labeled `0` from `q2`. I learned that I must record every possible next state instead of following only one path.
